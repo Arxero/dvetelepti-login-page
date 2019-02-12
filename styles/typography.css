@@ -1,0 +1,15 @@
+html {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.5;
+    font-size: 1rem;
+    color: #333333;
+}
+
+a {
+    color: #00b964;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #007c43;
+}
