@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://use.fontawesome.com/releases/v5.7.1/css/all.css');
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background: #111111;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* styles to go intro the project */
+
+.main-navigatoin {
+    max-width: 100%;
+    background: #c4c4c4;
+}
+
+.main-navigatoin-container {
+    max-width: 1350px;
+    background: #ffffff;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 15px;
+}
+
+.main-navigatoin-container .logo img {
+    width: 260px;
+    padding-right: 17px;
+}
+
+.main-navigatoin-container nav i {
+    padding-left: 5px;
+    font-size: 12px;
+}
+
+.main-navigatoin-container nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.main-navigatoin-container nav ul li a {
+    text-decoration: none;
+    display: block;
+    color: #444444;
+    font-size: 15px;
+}
+
+.main-navigatoin-container nav a:hover, .main-navigatoin-container nav a:active {
+    font-weight: bold;
+}
+
+.first-level {
+    display: flex;
+}
+
+.first-level>li {
+    position: relative;
+}
+
+.first-level>li>a {
+    padding: 37px 10px;
+}
+
+.first-level>li>a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: 15px;
+    left: 0;
+    background-color: #ffd500;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.first-level>li>a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.first-level>li:hover .second-level {
+    display: block;
+}
+
+.second-level {
+    background: #ffffff;
+    border: 1px solid #e1e1e1;
+    min-width: 200px;
+    width: max-content;
+    position: absolute;
+    display: none;
+}
+
+.second-level>li>a {
+    padding: 10px;
+    border-bottom: 1px solid #e1e1e1;
+    border-collapse: collapse;
+}
+
+/* responsive styles */
+
+#nav-toggle, #toggle {
+    display: none;
+}
+
+@media (max-width: 1100px) {
+    .main-navigatoin-container nav {
+        display: none;
+    }
+    #toggle {
+        display: block;
+    }
+    #nav-toggle:checked+.main-navigatoin-container nav {
+        display: block;
+        flex: 1 0 100%;
+        margin-top: 10px;
+        animation: navitemin 1s 1 cubic-bezier(.55, 0, .1, 1) forwards;
+    }
+    .fa-bars {
+        cursor: pointer;
+        padding: 10px 14px;
+        background: #14afb4;
+        color: #ffffff;
+        border-radius: 5px;
+        border: 1px solid #333;
+    }
+    .fa-bars:hover {
+        border: 1px solid transparent;
+        /* animation: jump .3s 1 ease-in-out forwards; */
+    }
+    #nav-toggle:checked+.main-navigatoin-container .fa-bars:before {
+        content: '\f00d';
+        cursor: pointer;
+    }
+    .first-level {
+        display: block;
+        background: #ffffff;
+    }
+    .first-level>li>a {
+        padding: 15px 10px;
+        background: #e6e6e6;
+        margin-bottom: 10px;
+        border-radius: 3px;
+        border-bottom: 4px solid transparent;
+    }
+    .first-level>li>a:hover {
+        border-bottom: 4px solid #ffd500;
+        box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.2);
+    }
+    .first-level>li>a::before {
+        display: none;
+    }
+    .second-level {
+        display: none;
+        width: 100%;
+        position: relative;
+        border: none;
+    }
+    .second-level>li>a {
+        border: none;
+        padding: 15px 10px;
+        background: rgb(214, 214, 214);
+        margin-bottom: 10px;
+        border-radius: 3px;
+        margin-left: 20px;
+        border-bottom: 4px solid transparent;
+        animation: jump .5s 1 ease-in-out forwards;
+    }
+    .second-level>li>a:hover {
+        border-bottom: 4px solid #ffd500;
+        box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.2);
+    }
+    @keyframes jump {
+        0% {
+            opacity: 0;
+            transform: translate(0, 0);
+        }
+        50% {
+            opacity: 1;
+            transform: translate(0, -.6rem);
+        }
+        100% {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+    }
+    @keyframes navitemin {
+        0% {
+            transform: translate(0, -20vh);
+        }
+        100% {
+            transform: translate(0, 0);
+        }
+    }
+}

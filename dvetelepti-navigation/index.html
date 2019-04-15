@@ -1,0 +1,118 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css">
+    <title>Dvete Lepti Navigatoin</title>
+</head>
+
+<body>
+    <section class="main-navigatoin">
+        <input type="checkbox" name="nav-toggle" id="nav-toggle">
+        <div class="main-navigatoin-container">
+            <div class="logo">
+                <a href="#">
+                    <img src="./assets/images/Logo_slogan.svg" alt="logo">
+                </a>
+            </div>
+            <label for="nav-toggle" id="toggle"><i class="fas fa-bars"></i></label>
+            <nav>
+                <ul class="first-level">
+                    <li><a href="#">НАЧАЛО</a></li>
+                    <li class><a href="#">ЗА НАС<i class="fa fa-caret-down"></i></a>
+                        <ul class="second-level">
+                            <li><a href="#">Кои сме ние</a></li>
+                            <li><a href="#">За какво се борим</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">ЗА ПРОЕКТА<i class="fa fa-caret-down"></i></a>
+                        <ul class="second-level">
+                            <li><a href="#">Как работи всичко</a></li>
+                            <li><a href="#">Защо да дарите тук</a></li>
+                            <li><a href="#">Историята за двете лепти</a></li>
+                            <li><a href="#">Какво е по-разичното в тази платаформа?</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">САМАРЯНИ<i class="fa fa-caret-down"></i></a>
+                        <ul class="second-level">
+                            <li><a href="{{ route('unapproved.samaritans') }}">Неодобрени самаряни</a></li>
+                            <li><a href="{{ route('why.become.samaritan') }}">Защо да станете самарянин</a></li>
+                            <li><a href="{{ route('how.to.become.samaritan') }}">Как се става самарянин</a></li>
+                            <li><a href="{{ route('sam-history') }}">Историята за добрия самарянин</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">КАМПАНИИ<i class="fa fa-caret-down"></i></a>
+                        <ul class="second-level">
+                            <li><a href="{{ route('how.to.create.campaign') }}">Как се създава кампания</a></li>
+                            <li><a href="{{ route('causes.index', ['clear' => 1]) }}">Списък с кампании</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">КОМИСИОННИ</a></li>
+                    <li><a href="#">ЧЗВ</a></li>
+                    <li><a href="#">КОНТАКТИ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+</body>
+
+</html>
+
+<!-- <section class="logo-row">
+        <div class="container big">
+          <div class="holder"> <strong class="logo"><a href="/"><img src="{{ asset('assets/icons/Logo_slogan.svg') }}" alt="logo"></a></strong>
+            <nav class="navbar navbar-inverse">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+              </div>
+              <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav" id="nav-t">
+                  <li class="{{ Nav::isRoute('home') }}"><a class="nav-a" href="/">НАЧАЛО</a></li>
+                  <li class="{{ Nav::hasSegment('about-us', 1) }}"><a class="nav-a" href="#">ЗА НАС <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                    <ul>
+                      <li><a href="{{ route('who.are.we') }}">Кои сме ние</a></li>
+                      <li><a href="{{ route('our.goals') }}">За какво се борим</a></li>
+                    </ul>
+                  </li>
+                  <li class="{{ Nav::hasSegment('about-dvete-lepti', 1) }}"><a class="nav-a" href="#">ЗА ПРОЕКТА <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                    <ul>
+                      <li><a href="{{ route('how.it.works') }}">Как работи всичко</a></li>
+                      <li><a href="{{ route('why.donate.here') }}">Защо да дарите тук</a></li>
+                      <li><a href="{{ route('history') }}">Историята за двете лепти</a></li>
+                      <li><a href="{{ route('our.platform') }}">Какво е по-разичното в тази платаформа?</a></li>
+                    </ul>
+                  </li>
+                  <li class="{{ Nav::hasSegment('samaritans', 1) }}"><a class="nav-a" href="#">САМАРЯНИ <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                    <ul>
+                      @can('samaritan')
+                      <li><a href="{{ route('unapproved.samaritans') }}">Неодобрени самаряни ({{$unapprovedSamaritansNum}})</a></li>
+                      @endcan
+                      <li><a href="{{ route('why.become.samaritan') }}">Защо да станете самарянин</a></li>
+                      <li><a href="{{ route('how.to.become.samaritan') }}">Как се става самарянин</a></li>
+                      <li><a href="{{ route('sam-history') }}">Историята за добрия самарянин</a></li>
+                    </ul>
+                  </li> 
+                  <li class="{{Nav::hasSegment('campaigns', 1)}}"><a class="nav-a" href="#">КАМПАНИИ<i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                    <ul>
+                      <li><a href="{{ route('how.to.create.campaign') }}">Как се създава кампания</a></li>
+                    @can('samaritan')
+                      <li><a href="{{ route('causes.create') }}">Създаване</a></li>
+                      <li><a href="/campaigns?by={{auth()->user()->name}}">Моите кампании</a></li>
+                      @if($causesCount)
+                        <li><a href="{{ route('donations.list') }}">Дарения</a></li>
+                      @endif
+                    @endcan
+                      <li><a href="{{ route('causes.index', ['clear' => 1]) }}">Списък с кампании</a></li>
+                    </ul>
+                  </li>
+                  <li class="{{ Nav::hasSegment('fees', 1) }}"><a class="nav-a" href="{{ route('fees') }}">КОМИСИОННИ</a></li>
+                  <li class="{{ Nav::hasSegment('faq', 1) }}"><a class="nav-a" href="{{ route('faq') }}">ЧЗВ</a></li>
+                  <li class="{{ Nav::hasSegment('contact', 1) }}"><a class="nav-a" href="{{ route('contact') }}">КОНТАКТИ</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </section> -->

@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://use.fontawesome.com/releases/v5.7.1/css/all.css');
+html {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #111111;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+p {
+    color: #777777;
+    font-size: 18px;
+}
+
+.campaign-wrapper {
+    /* height: 100%; */
+    max-width: 1350px;
+    /* margin: 0 auto; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* styles to go intro the project */
+
+.campaign-container {
+    flex: 1 1 100%;
+    background: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.campaign-container .campaign-image {
+    flex: 1 1 31%;
+    padding: 0 15px 15px 15px;
+}
+
+.campaign-container .campaign-image img {
+    width: 100%;
+}
+
+.campaign-container .campaign-info {
+    flex: 1 1 64%;
+    padding: 0 15px 15px 10px;
+}
+
+.campaign-container .campaign-info h4 {
+    font-size: 26px;
+}
+
+.campaign-container .campaign-info hr {
+    margin: 10px 20px 0 0;
+    border-top: 1px solid #cdcdcd;
+}
+
+/* buttons */
+
+.campaign-info .info .btn-readmore {
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    color: #ffffff;
+    padding: 11.5px 0px;
+    background: #00b2a2;
+    border: solid 1px #46b8da;
+    width: 268px;
+    text-align: center;
+    margin-top: 20px;
+    height: 19px;
+}
+
+.campaign-info .info .btn-readmore:hover {
+    border-color: #269abc;
+}
+
+.campaign-info .info .btn-readmore i {
+    font-size: 15px;
+}
+
+.campaign-info .info .btn-donate {
+    display: block;
+    text-decoration: none;
+    color: #434147;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 7px 0px;
+    background: #ffe07b;
+    width: 270px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.campaign-info .info .btn-donate img {
+    width: 50px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+/* buttons */
+
+/* info stats */
+.campaign-container .campaign-info .info {
+    padding-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.campaign-container .campaign-info .info-text {
+    padding-right: 70px;
+    padding-bottom: 16px;
+    flex: 1 1 400px;
+}
+
+.info .info-stats {
+    color: #777777;
+    flex: 1 1 40%;
+}
+
+.info .info-buttons {
+    flex: 0 1 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+}
+
+.readmore-container {
+    flex: 1 1 50%;
+}
+.donate-container {
+    flex: 1 1 35%;
+}
+
+.info .info-stats .info-stat {
+    margin-bottom: 10px;
+}
+
+.info .info-stats img {
+    width: 22px;
+    height: 22px;
+    color: #777777;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.info .info-stats span {
+    font-weight: bold;
+    color: #00b2a2;
+}
+
+.info .info-stats a {
+    text-decoration: none;
+}
+
+.info .info-stat-combined img {
+    margin-right: 2px;
+}
+
+.info .info-stat-combined span {
+    color: #777777;
+    margin-right: 10px;
+    font-weight: initial;
+}
+
+/* info stats */
+@media (max-width: 800px) {
+    /* .info .info-buttons {
+        flex: 0 1 100%;
+    } */
+}
+@media (max-width: 640px) {
+    .campaign-info .info .btn-readmore, .campaign-info .info .btn-donate {
+        width: 100%;
+    }
+    .readmore-container, .donate-container {
+        flex: 1 1 100%;
+    }
+    .campaign-container .campaign-info .info-text {
+        padding-right: 15px;
+    }
+}

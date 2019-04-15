@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://use.fontawesome.com/releases/v5.7.1/css/all.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css');
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background: #111111;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* styles to go intro the project */
+
+.main-header {
+    background: #00B2A2;
+    width: 100%;
+}
+
+.main-header-container {
+    max-width: 1350px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4.5px 0;
+}
+
+.main-header-left {
+    margin-left: 15px;
+}
+
+.main-header-right {
+    margin-right: 15px;
+}
+
+.main-header-left .language button {
+    background: #00B2A2;
+    border: none;
+    color: white;
+    outline: none;
+    font-weight: 400;
+}
+
+.main-header-left a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.main-header-left a:hover {
+    color: #333333;
+    transition: all 0.5s ease-in;
+}
+
+.language button i {
+    font-size: 16px;
+}
+
+.language button img {
+    width: 1.23em;
+}
+
+.main-header-right {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.main-header-right .login-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.main-header-right .login-info a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 13px;
+    padding: 8px 20px;
+    border-left: 1px solid #fff;
+}
+
+.main-header-right .login-info a:first-child {
+    border: none;
+    font-size: 15px;
+}
+
+.main-header-right .login-info a:hover {
+    color: #333333;
+    transition: all 0.5s ease-in;
+}
+
+.main-header-right i {
+    padding-right: 5px;
+}
+
+/* .main-header-right .activity a {
+    color: #ffffff;
+    font-size: 15px;
+    margin-right: 10px;
+} */
+
+/* .main-header-right .activity a:hover {
+    color: #333333;
+    transition: all 0.5s ease-in;
+} */
+
+.main-header-right form {
+    padding: 0;
+    margin: 0;
+}
+
+.main-header-right form input {
+    border-radius: 3px;
+    background-color: #c0eae6;
+    outline: none;
+    border: 1px solid #c0eae6;
+    margin-left: 5px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.main-header-right form i {
+    font-size: 14px;
+    color: #fff;
+}
+
+@media (max-width: 660px) {
+    .main-header-container {
+        padding: 10px;
+    }
+    .main-header-left {
+        flex-basis: 100%;
+        margin: 0;
+    }
+    .main-header-right {
+        flex-basis: 100%;
+        justify-content: center;
+        margin: 0;
+    }
+    .main-header-right .login-info {
+        justify-content: center;
+        padding: 5px 0;
+    }
+    .main-header-right .login-info a {
+        border: none;
+    }
+    .main-header-right form {
+        padding-top: 5px;
+    }
+}

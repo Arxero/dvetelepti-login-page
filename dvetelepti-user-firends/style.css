@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://use.fontawesome.com/releases/v5.7.1/css/all.css');
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background: #111111;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* styles to go intro the project */
+
+.user-friends-container {
+    background: #EFEFEF;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+}
+
+.user-friends-container .friend-wrapper {
+    background: #ffffff;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 16px;
+}
+
+.user-friends-container .friend-wrapper .friend-image {
+    flex: 1 1 250px;
+}
+
+.user-friends-container .friend-info-stats {
+    flex: 1 1 50%;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+.friend-wrapper .friend-image img {
+    width: 100%;
+}
+
+.friend-info-stats .friend-name {
+    background: #00B2A2;
+    padding: 10px;
+    font-weight: bold;
+    min-height: 35px;
+    max-height: 35px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.friend-info-stats .friend-stats {
+    padding: 16px;
+    color: #777777;
+    font-size: 14px;
+}
+
+.friend-info-stats .friend-stats div {
+    padding-bottom: 10px;
+}
+
+.friend-info-stats .friend-stats img {
+    width: 22px;
+    vertical-align: middle;
+    padding-right: 5px;
+}
+
+

@@ -1,0 +1,119 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css">
+    <title>Dvete Lepti | User Friends</title>
+</head>
+
+<body>
+    <div class="user-friends-container">
+        <div class="friend-wrapper">
+            <div class="friend-image">
+                <a href="#">
+                    <img src="./assets/images/noimage.gif" alt="">
+                </a>
+            </div>
+            <div class="friend-info-stats">
+                <div class="friend-name">Victor Emanouilov Emanouilov</div>
+                <div class="friend-stats">
+                    <div><img src="./assets/icons/location.svg" alt="">не е посочен</div>
+                    <div><img src="./assets/icons/time.svg" alt="">08-02-2018 г.</div>
+                    <div><img src="./assets/icons/samarianin.svg" alt="">Самарянин</div>
+                    <div><img src="./assets/icons/kategorii.svg" alt="">Участие в кампании: 1</div>
+                    <div><img src="./assets/icons/star.png" alt="">Рейтинг: 1</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="friend-wrapper">
+            <div class="friend-image">
+                <a href="#">
+                    <img src="./assets/images/noimage.gif" alt="">
+                </a>
+            </div>
+            <div class="friend-info-stats">
+                <div class="friend-name">Victor Emanouilov</div>
+                <div class="friend-stats">
+                    <div><img src="./assets/icons/location.svg" alt="">не е посочен</div>
+                    <div><img src="./assets/icons/time.svg" alt="">08-02-2018 г.</div>
+                    <div><img src="./assets/icons/samarianin.svg" alt="">Самарянин</div>
+                    <div><img src="./assets/icons/kategorii.svg" alt="">Участие в кампании: 1</div>
+                    <div><img src="./assets/icons/star.png" alt="">Рейтинг: 1</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="friend-wrapper">
+            <div class="friend-image">
+                <a href="#">
+                    <img src="./assets/images/noimage.gif" alt="">
+                </a>
+            </div>
+            <div class="friend-info-stats">
+                <div class="friend-name">Victor</div>
+                <div class="friend-stats">
+                    <div><img src="./assets/icons/location.svg" alt="">не е посочен</div>
+                    <div><img src="./assets/icons/time.svg" alt="">08-02-2018 г.</div>
+                    <div><img src="./assets/icons/samarianin.svg" alt="">Самарянин</div>
+                    <div><img src="./assets/icons/kategorii.svg" alt="">Участие в кампании: 1</div>
+                    <div><img src="./assets/icons/star.png" alt="">Рейтинг: 1</div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
+
+
+  <!--TEAM STYLE 1 START-->
+  <!-- <section class="team-style-2" style="background-color: #efefef; margin-top: -20px">
+    @if(count($friends) === 0)
+      <p>До момента няма приятели!</p>
+    @else
+      <div class="row" id="prof-row">
+        @foreach($friends as $friend)
+          <div class="col-md-6 prof-fr">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="thumb">
+                  <a href="{{route('profile',["id" => $friend->id])}}"><img src="{{ $friend->images ? '/images/profile/' . $friend->images : '/assets/images/noimage.gif' }}" alt="{{$friend->name}}" class="img-responsive list-samartitan-img">
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="name-head">
+                  <p class="prof-name">{{$friend->name . ' ' . $friend->surname}}</p>
+                </div>
+                <div class="friend-info">
+                  <p class="friend-body"><img src="{{ asset('assets/icons/location.svg') }}" alt="" width="22" height="22"> &nbsp; {{$friend->current_town ?: 'не е посочен'}}</p>
+                  <p class="friend-body"><img src="{{ asset('assets/icons/time.svg') }}" alt="" width="22" height="22"> &nbsp; {{Helper::dateFormat($friend->created_at)}} г.</p>
+                  @if ($friend->role === 'user')
+                    <p class="friend-body"><img src="{{ asset('assets/icons/donations_go_to.svg') }}" alt="" width="22" height="22"> &nbsp; Дарител</p>
+                  @elseif($friend->role === 'samaritan')
+                    <p class="friend-body"><img src="{{ asset('assets/icons/samarianin.svg') }}" alt="" width="22" height="22"> &nbsp; Самарянин</p>
+                  @else
+                    <p class="friend-body"><img src="{{ asset('assets/icons/poluchatel.svg') }}" alt="" width="22" height="22"> &nbsp; Адинистратор</p>
+                  @endif
+                  <p class="friend-body"><img src="{{ asset('assets/icons/kategorii.svg') }}" alt="" width="22" height="22"> &nbsp; Участие в кампании: {{$friend->causeSupportsCount()}}</p>
+                  <p class="friend-body"><img src="{{ asset('assets/icons/star.png') }}" alt="" width="26" height="22"> &nbsp; Рейтинг: {{$friend->supportsSamaritan()}}</p>
+                  @if(Auth::check() && Auth::user()->id === $user->id)
+                    <a class="friend-rem" href="{{route('friends.remove',["friend_id" => $friend->id])}}" title="Премахни" onclick="return confirm('Сигурни ли сте, че искате да премахнете {{$friend->name}} от приятелите си ?');" ><i style="color: #00b2a2;" class="fa fa-remove" aria-hidden="true"></i></a>
+                  @endif
+                </div>
+              </div>
+            </div>
+          </div>
+        @endforeach
+      </div>
+    @endif
+  </section> -->
+  <!--TEAM STYLE 1 END-->
+
+
+
